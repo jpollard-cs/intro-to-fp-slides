@@ -371,7 +371,7 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit caps lineHeight={1} textColor="#4897D8">
               TIME FOR AN EXERCISE!
             </Heading>
-            <Link href="https://jsbin.com/dujujigofe/edit?html,js,output">https://jsbin.com/dujujigofe/edit</Link>
+            <Link href="https://jsbin.com/dujujigofe/edit">https://jsbin.com/dujujigofe/edit</Link>
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="black">
             <Heading size={2} caps fit textColor="#31A9B8">
@@ -405,6 +405,8 @@ export default class Presentation extends React.Component {
 - http://icanhas.cheezburger.com/lolcats
 - Google images
 - https://designschool.canva.com/blog/100-color-combinations/
+- https://xkcd.com/
+- Wikipedia
             `}></Markdown>
           </Slide>
         </Deck>
