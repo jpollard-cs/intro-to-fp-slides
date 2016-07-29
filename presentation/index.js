@@ -404,6 +404,7 @@ export default class Presentation extends React.Component {
 - http://curtclifton.net/papers/MoseleyMarks06a.pdf
 - http://icanhas.cheezburger.com/lolcats
 - Google images
+- https://designschool.canva.com/blog/100-color-combinations/
             `}></Markdown>
           </Slide>
         </Deck>
