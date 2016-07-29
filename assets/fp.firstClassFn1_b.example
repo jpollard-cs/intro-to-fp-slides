@@ -1,0 +1,5 @@
+var compact = function(xs) {
+  return xs.filter(function(x) {
+    return x !== null && x !== undefined;
+  });
+};

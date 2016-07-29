@@ -1,0 +1,8 @@
+// refactor this to remove all arguments
+// by partially applying the function
+// NOTE: ramda automatically curries for you!
+import * as _ from 'ramda';
+
+const words = (str) => _.split(' ', str);
+
+// bonus: Use _.map to make a new words fn that works on an array of strings.

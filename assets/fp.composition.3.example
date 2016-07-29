@@ -1,0 +1,16 @@
+const toUppercase = x => x.toUpperCase();
+const head = x => x[0];
+const reverse = reduce((acc, x) => [x].concat(acc), []);
+const exclaim = x => `${x}!`;
+
+const last = compose(head, reverse);
+const loudLastUpper = compose(exclaim, toUpperCase, last);
+
+// or
+const last = compose(head, reverse);
+const angry = compose(exclaim, toUpperCase);
+const loudLastUpper = compose(angry, last);
+`those birds are so ${loudLastUpper(['happy', 'happy', 'angry'])}`;
+//=> 'those birds are so ANGRY!'
+
+// more variations...

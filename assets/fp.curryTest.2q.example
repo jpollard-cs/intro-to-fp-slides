@@ -1,0 +1,7 @@
+import * as _ from 'ramda';
+
+// LEAVE BE:
+const keepHighest = (x, y) => x >= y ? x : y;
+
+// REFACTOR THIS ONE:
+const max = (xs) => _.reduce((acc, x) => keepHighest(acc, x), -Infinity, xs);

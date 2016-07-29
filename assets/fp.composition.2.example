@@ -1,0 +1,31 @@
+// or a version of composition that takes unlimited arguments
+// (in a more robust version we would check the arguments are functions)
+// try it out at http://www.es6fiddle.net/ir82mzxu/
+// we'll use generators for fun
+function* reverse(arr) {
+  const startIndex = arr.length - 1;
+  for (let i = startIndex; i >= 0; i--) {
+    yield arr[i];
+  }
+}
+
+const compose = (...args) => {
+    if (args.length === 0) { throw "compose requires at least one argument"; }
+    return (input) => {
+        let output = input;
+        for (let fn of reverse(args)){
+            // we could also curry the fn here to allow for functions that do
+            // not have an arity of 1 (not unary), but we'll avoid that complexity for now
+            output = fn(output);
+        }
+        return output;
+    };
+};
+
+const square = (x) => x * x;
+const addTwo = (x) => x + 2;
+const addFive = (x) => x + 5;
+
+//         read right-to-left <==
+compose(addTwo, square, addFive)(2);
+//=> 51

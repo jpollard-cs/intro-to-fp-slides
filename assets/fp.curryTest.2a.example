@@ -1,0 +1,6 @@
+import * as _ from 'ramda';
+
+const keepHighest = (x, y) => x >= y ? x : y;
+
+// remove all that fluff!
+const max = _.reduce(keepHighest, -Infinity);

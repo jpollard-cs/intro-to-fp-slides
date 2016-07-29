@@ -1,0 +1,13 @@
+const notNullOrEmptyPredicate = x => !_.isNil(x) && !_.isEmpty(x)
+const nullOrEmptyFilter = _.curry(_.filter(notNullOrEmptyPredicate));
+const test = nullOrEmptyFilter([1, 2, 3, null, 5, [], '', 'eight']);
+//=> [1, 2, 3, 5, 'eight']
+
+// wrap array's slice to be functional and curried.
+// [1, 2, 3].slice(0, 2)
+const slice = _.curry((start, end, xs) => xs.slice(start, end));
+
+// use slice to define a function "take" that takes n elements. make it curried
+const take = slice(0);
+take(4)(test);
+//=> [1, 2, 3, 5]

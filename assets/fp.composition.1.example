@@ -1,0 +1,13 @@
+const compose = (f, g) => {
+  return (x) => f(g(x));
+};
+
+// or if we really want we can make it a one-liner
+const compose = (f, g) => (x) => f(g(x));
+
+// or ES5 style
+var compose = function(f, g) {
+  return function(x) {
+    return f(g(x));
+  };
+};

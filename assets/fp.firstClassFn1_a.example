@@ -1,0 +1,5 @@
+var validArticles = function(articles) {
+  return articles.filter(function(article) {
+    return article !== null && article !== undefined;
+  });
+};
