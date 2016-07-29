@@ -46,7 +46,8 @@ const images = {
   poop: require("../assets/poop.png"),
   curry: require("../assets/curry.png"),
   legos: require("../assets/legos.jpg"),
-  fourierCat: require('../assets/fourierCat.jpg')
+  fourierCat: require('../assets/fourierCat.jpg'),
+  quadruplets: require('../assets/quadruplets.jpg')
 };
 
 preloader(images);
@@ -171,6 +172,15 @@ export default class Presentation extends React.Component {
             </Layout>
             <Heading size={1} fit textColor="#F9A603">
               spare me <i>this</i>
+            </Heading>
+          </Slide>
+          <Slide transition={["zoom", "slide"]} bgColor="black">
+            <Heading size={1} fit textColor="#31A9B8">
+              Repetitive code can be
+            </Heading>
+            <Image src={images.quadruplets.replace("/", "")} margin="20px" height="300px"/>
+            <Heading size={1} fit textColor="#F9A603">
+              very confusing
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
@@ -398,7 +408,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="White">
-            <Heading caps fit textColor="#CF3721">Sources</Heading>
+            <Heading fit caps textColor="#CF3721">Sources</Heading>
             <Markdown source={`
 - https://drboolean.gitbooks.io/mostly-adequate-guide
 - http://curtclifton.net/papers/MoseleyMarks06a.pdf
